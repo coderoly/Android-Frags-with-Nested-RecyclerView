@@ -1,4 +1,4 @@
-package io.github.coderoly.fragswithnestedlists.adapter;
+package io.github.coderoly.fragswithnestedlists.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

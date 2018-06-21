@@ -1,4 +1,4 @@
-package io.github.coderoly.fragswithnestedlists.adapter;
+package io.github.coderoly.fragswithnestedlists.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,9 +9,9 @@ import android.widget.TextView;
 import java.util.List;
 
 import io.github.coderoly.fragswithnestedlists.R;
-import io.github.coderoly.fragswithnestedlists.object.Movie;
+import io.github.coderoly.fragswithnestedlists.objects.Movie;
 
-public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.MyViewHolder> {
+public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder> {
 
     private List<Movie> moviesList;
 
@@ -20,20 +20,20 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
 
         public MyViewHolder(View view) {
             super(view);
-            movie = (TextView) view.findViewById(R.id.tv_Movie);
-            actor = (TextView) view.findViewById(R.id.tv_Actor);
+            movie = view.findViewById(R.id.tv_Movie);
+            actor = view.findViewById(R.id.tv_Actor);
         }
     }
 
 
-    public MyRecyclerAdapter(List<Movie> moviesList) {
+    public MovieAdapter(List<Movie> moviesList) {
         this.moviesList = moviesList;
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.recyclerview_row, parent, false);
+                .inflate(R.layout.recyclerview_movies_row, parent, false);
 
         return new MyViewHolder(itemView);
     }

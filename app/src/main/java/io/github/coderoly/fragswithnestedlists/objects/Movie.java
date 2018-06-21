@@ -1,4 +1,4 @@
-package io.github.coderoly.fragswithnestedlists.object;
+package io.github.coderoly.fragswithnestedlists.objects;
 
 
 public class Movie {
